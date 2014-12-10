@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: 建立新的 Home
+            reorder: 对 Homes 重新排序
+            reorder_done: 对 Homes 的重新排序结束
+          records:
+            title: Homes
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Homes yet. Click "Add New Home" to add your first home.
+            no_items_yet: 目前没有 Homes . 点击 "Add New Home" 创建一个home.
+          home:
+            view_live_html: 查看 home 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 home
+            delete: 永久删除 home
+      homes:
+        show:
+          other: 其他 Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        title: Title
+        type_module: Type Module
+        content: Content

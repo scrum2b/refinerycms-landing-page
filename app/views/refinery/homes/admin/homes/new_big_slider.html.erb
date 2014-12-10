@@ -1,0 +1,47 @@
+<h1>Big slider</h1>
+
+<%= form_for [refinery, :homes_admin, @home] do |f| -%>
+	
+<!-- 	<div class='field'>
+    < %= f.label :photo -%>
+    < %= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :title,
+               :image => @home.title,
+               :toggle_image_display => false -%>
+  </div> -->
+
+  <%= render '/refinery/admin/error_messages',
+              :object => @home,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field' style="display: block">
+    <%= f.label :type_module -%>
+    <%= f.text_field :type_module, :value => 'big slider' -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:content],
+                :object => "homes/home" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.homes.admin.homes.home'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @home.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

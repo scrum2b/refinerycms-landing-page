@@ -1,0 +1,29 @@
+cs:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Přidat Home
+            reorder: Řadit Homes
+            reorder_done: Konec řazení Homes
+          records:
+            title: Homes
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Homes. Zvolte "Přidat Home" pro přidání prvního home.
+          home:
+            view_live_html: Zobrazit náhled home<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit home
+            delete: Smazat home
+      homes:
+        show:
+          other: Další Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        title: Title
+        type_module: Type Module
+        content: Content

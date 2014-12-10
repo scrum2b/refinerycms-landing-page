@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Nieuwe Home toevoegen
+            reorder: De volgorde van de Homes wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Home-volgorde
+          records:
+            title: Homes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Homes. Druk op 'Nieuwe Home toevoegen' om de eerste toe te voegen.
+          home:
+            view_live_html: Deze home op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze home
+            delete: Deze home definitief verwijderen
+      homes:
+        show:
+          other: Andere Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        title: Title
+        type_module: Type Module
+        content: Content

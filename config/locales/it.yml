@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Aggiungi Nuovo Home
+            reorder: Riordina Homes
+            reorder_done: Termina il Riordino di Homes
+          records:
+            title: Homes
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Homes. Clicca "Aggiungi Nuovo Home" per aggiungere il tuo primo home.
+          home:
+            view_live_html: Guarda live questo home <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo home
+            delete: Rimuovi per sempre questo home
+      homes:
+        show:
+          other: Altri Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        title: Title
+        type_module: Type Module
+        content: Content

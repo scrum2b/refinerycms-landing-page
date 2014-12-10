@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Yeni Ekle Home
+            reorder: Tekrar sirala Homes
+            reorder_done: Tekrar siralama tamamlandiHomes
+          records:
+            title: Homes
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Homes yok henuz.  Tikla "Yeni Ekle Home" eklemek senin ilk home.
+          home:
+            view_live_html: Bunu canlu home goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle home
+            delete: Bunu Sil home sonsuza dek
+      homes:
+        show:
+          other: Diger Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        title: Title
+        type_module: Type Module
+        content: Content
