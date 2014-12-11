@@ -1,29 +1,29 @@
 cs:
   refinery:
     plugins:
-      landing_pages:
-        title: Landing Pages
-    landing_pages:
+      page_modules:
+        title: Page Modules
+    page_modules:
       admin:
-        landing_pages:
+        page_modules:
           actions:
-            create_new: Přidat Landing Page
-            reorder: Řadit Landing Pages
-            reorder_done: Konec řazení Landing Pages
+            create_new: Přidat Page Module
+            reorder: Řadit Page Modules
+            reorder_done: Konec řazení Page Modules
           records:
-            title: Landing Pages
+            title: Page Modules
             sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
-            no_items_yet: Zatím nebyly vytvořeny žádné Landing Pages. Zvolte "Přidat Landing Page" pro přidání prvního landing page.
-          landing_page:
-            view_live_html: Zobrazit náhled landing page<br/><em>(otevře se v novém okně)</em>
-            edit: Upravit landing page
-            delete: Smazat landing page
-      landing_pages:
+            no_items_yet: Zatím nebyly vytvořeny žádné Page Modules. Zvolte "Přidat Page Module" pro přidání prvního page module.
+          page_module:
+            view_live_html: Zobrazit náhled page module<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit page module
+            delete: Smazat page module
+      page_modules:
         show:
-          other: Další Landing Pages
+          other: Další Page Modules
   activerecord:
     attributes:
-      'refinery/landing_pages/landing_page':
+      'refinery/page_modules/page_module':
         title: Title
         type_module: Type Module
         body: Body

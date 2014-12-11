@@ -1,29 +1,29 @@
 nl:
   refinery:
     plugins:
-      landing_pages:
-        title: Landing Pages
-    landing_pages:
+      page_modules:
+        title: Page Modules
+    page_modules:
       admin:
-        landing_pages:
+        page_modules:
           actions:
-            create_new: Nieuwe Landing Page toevoegen
-            reorder: De volgorde van de Landing Pages wijzigen
-            reorder_done: Klaar met het wijzingen van de van de Landing Page-volgorde
+            create_new: Nieuwe Page Module toevoegen
+            reorder: De volgorde van de Page Modules wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Page Module-volgorde
           records:
-            title: Landing Pages
+            title: Page Modules
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Landing Pages. Druk op 'Nieuwe Landing Page toevoegen' om de eerste toe te voegen.
-          landing_page:
-            view_live_html: Deze landing page op de website bekijken <br/><em>(opent in een nieuw venster)</em>
-            edit: Bewerk deze landing page
-            delete: Deze landing page definitief verwijderen
-      landing_pages:
+            no_items_yet: Er zijn nog geen Page Modules. Druk op 'Nieuwe Page Module toevoegen' om de eerste toe te voegen.
+          page_module:
+            view_live_html: Deze page module op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze page module
+            delete: Deze page module definitief verwijderen
+      page_modules:
         show:
-          other: Andere Landing Pages
+          other: Andere Page Modules
   activerecord:
     attributes:
-      'refinery/landing_pages/landing_page':
+      'refinery/page_modules/page_module':
         title: Title
         type_module: Type Module
         body: Body

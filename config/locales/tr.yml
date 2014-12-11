@@ -1,29 +1,29 @@
 tr:
   refinery:
     plugins:
-      landing_pages:
-        title: Landing Pages
-    landing_pages:
+      page_modules:
+        title: Page Modules
+    page_modules:
       admin:
-        landing_pages:
+        page_modules:
           actions:
-            create_new: Yeni Ekle Landing Page
-            reorder: Tekrar sirala Landing Pages
-            reorder_done: Tekrar siralama tamamlandiLanding Pages
+            create_new: Yeni Ekle Page Module
+            reorder: Tekrar sirala Page Modules
+            reorder_done: Tekrar siralama tamamlandiPage Modules
           records:
-            title: Landing Pages
+            title: Page Modules
             sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
-            no_items_yet: Herhangi bir Landing Pages yok henuz.  Tikla "Yeni Ekle Landing Page" eklemek senin ilk landing page.
-          landing_page:
-            view_live_html: Bunu canlu landing page goruntule <br/><em>(yeni bir pencerede acar)</em>
-            edit: Bunu Duzenle landing page
-            delete: Bunu Sil landing page sonsuza dek
-      landing_pages:
+            no_items_yet: Herhangi bir Page Modules yok henuz.  Tikla "Yeni Ekle Page Module" eklemek senin ilk page module.
+          page_module:
+            view_live_html: Bunu canlu page module goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle page module
+            delete: Bunu Sil page module sonsuza dek
+      page_modules:
         show:
-          other: Diger Landing Pages
+          other: Diger Page Modules
   activerecord:
     attributes:
-      'refinery/landing_pages/landing_page':
+      'refinery/page_modules/page_module':
         title: Title
         type_module: Type Module
         body: Body

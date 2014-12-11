@@ -1,29 +1,29 @@
 fr:
   refinery:
     plugins:
-      landing_pages:
-        title: Landing Pages
-    landing_pages:
+      page_modules:
+        title: Page Modules
+    page_modules:
       admin:
-        landing_pages:
+        page_modules:
           actions:
-            create_new: Créer un(e) nouve(au/l/lle) Landing Page
-            reorder: Réordonner les Landing Pages
-            reorder_done: Fin de réordonnancement des Landing Pages
+            create_new: Créer un(e) nouve(au/l/lle) Page Module
+            reorder: Réordonner les Page Modules
+            reorder_done: Fin de réordonnancement des Page Modules
           records:
-            title: Landing Pages
+            title: Page Modules
             sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Landing Page. Cliquer sur "Créer un(e) nouve(au/l/lle) Landing Page" pour créer votre premi(er/ère) landing page.'
-          landing_page:
-            view_live_html: Voir ce(t/tte) landing page <br/><em>(Ouvre une nouvelle fenêtre)</em>
-            edit: Modifier ce(t/tte) landing page
-            delete: Supprimer définitivement ce(t/tte) landing page
-      landing_pages:
+            no_items_yet: 'Il n''y a actuellement aucun(e) Page Module. Cliquer sur "Créer un(e) nouve(au/l/lle) Page Module" pour créer votre premi(er/ère) page module.'
+          page_module:
+            view_live_html: Voir ce(t/tte) page module <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) page module
+            delete: Supprimer définitivement ce(t/tte) page module
+      page_modules:
         show:
-          other: Autres Landing Pages
+          other: Autres Page Modules
   activerecord:
     attributes:
-      'refinery/landing_pages/landing_page':
+      'refinery/page_modules/page_module':
         title: Title
         type_module: Type Module
         body: Body

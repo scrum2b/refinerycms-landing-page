@@ -1,29 +1,29 @@
 nb:
   refinery:
     plugins:
-      landing_pages:
-        title: Landing Pages
-    landing_pages:
+      page_modules:
+        title: Page Modules
+    page_modules:
       admin:
-        landing_pages:
+        page_modules:
           actions:
-            create_new: Lag en ny Landing Page
-            reorder: Endre rekkefølgen på Landing Pages
-            reorder_done: Ferdig å endre rekkefølgen Landing Pages
+            create_new: Lag en ny Page Module
+            reorder: Endre rekkefølgen på Page Modules
+            reorder_done: Ferdig å endre rekkefølgen Page Modules
           records:
-            title: Landing Pages
+            title: Page Modules
             sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Landing Pages enda. Klikk på "Lag en ny Landing Page" for å legge til din første landing page.
-          landing_page:
-            view_live_html: Vis hvordan denne landing page ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
-            edit: Rediger denne landing page
-            delete: Fjern denne landing page permanent
-      landing_pages:
+            no_items_yet: Det er ingen Page Modules enda. Klikk på "Lag en ny Page Module" for å legge til din første page module.
+          page_module:
+            view_live_html: Vis hvordan denne page module ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne page module
+            delete: Fjern denne page module permanent
+      page_modules:
         show:
-          other: Andre Landing Pages
+          other: Andre Page Modules
   activerecord:
     attributes:
-      'refinery/landing_pages/landing_page':
+      'refinery/page_modules/page_module':
         title: Title
         type_module: Type Module
         body: Body

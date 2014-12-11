@@ -1,16 +1,22 @@
 Refinery::Core::Engine.routes.draw do
 
   # Frontend routes
-  namespace :landing_pages do
-    resources :landing_pages, :path => '', :only => [:index, :show]
+  namespace :page_modules do
+    resources :page_modules, :path => '', :only => [:index, :show]
+    resources :page_module_images
   end
 
   # Admin routes
-  namespace :landing_pages, :path => '' do
+  namespace :page_modules, :path => '' do
     namespace :admin, :path => Refinery::Core.backend_route do
-      resources :landing_pages, :except => :show do
+      resources :page_modules, :except => :show do
         collection do
           post :update_positions
+
+          get :new_big_slider
+          get :new_small_slider
+
+          post :save_small_slider
         end
       end
     end

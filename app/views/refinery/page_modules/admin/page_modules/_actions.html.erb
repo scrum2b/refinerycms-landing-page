@@ -1,0 +1,41 @@
+<ul>
+  <% if ::Refinery::PageModules::Admin::PageModulesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.page_modules_admin_page_modules_path %>
+    </li>
+  <% end %>
+  <ul class="collapsible_menu">
+    <li class="not_a_link open">
+      <a class="add_icon create_new_home"><%= t('.create_new') %></a>
+      <span class="arrow">&nbsp;</span>
+    </li>
+    <div class="select_new_home" style="display: none;">
+      <li><%= link_to 'default', refinery.new_page_modules_admin_page_module_path,
+                 :class => "add_icon" %></li>
+      <li><%= link_to 'big slider', refinery.new_big_slider_page_modules_admin_page_modules_path,
+                 :class => "add_icon" %></li>
+      <li><%= link_to 'small slider', refinery.new_small_slider_page_modules_admin_page_modules_path,
+                 :class => "add_icon" %></li>
+    </div>
+  </ul>
+
+<% if !searching? && ::Refinery::PageModules::Admin::PageModulesController.sortable? && ::Refinery::PageModules::PageModule.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Page Modules"),
+                 refinery.page_modules_admin_page_modules_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Page Modules"),
+                 refinery.page_modules_admin_page_modules_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
+<script type="text/javascript">
+  $( ".create_new_home" ).click(function() {
+    $( ".select_new_home" ).toggle();
+  });
+</script>

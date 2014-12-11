@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="page_modules">
+    <% @page_modules.each do |page_module| %>
+      <li>
+        <%= link_to page_module.title, refinery.page_modules_page_module_path(page_module) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

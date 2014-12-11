@@ -1,0 +1,37 @@
+<h1>Big slider</h1>
+
+<%= form_for [refinery, :page_modules_admin, @page_module] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @page_module,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field' style="display: block" >
+    <%= f.label :type_module -%>
+    <%= f.text_field :type_module, :value => 'big slider' -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:body],
+                :object => "page_modules/page_module" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.page_modules.admin.page_modules.page_module'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @page_module.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

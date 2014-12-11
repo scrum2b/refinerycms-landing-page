@@ -1,0 +1,60 @@
+<h1>Small slider</h1>
+
+<%= form_for @page_module, :url => '/refinery/page_modules/save_small_slider', :method => :post do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @page_module,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field' style="display: none" >
+    <%= f.label :type_module -%>
+    <%= f.text_field :type_module, :value => 'big slider' -%>
+  </div>
+
+  <div class='field' style="display: none" >
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:body],
+                :object => "page_modules/page_module" -%>
+  </div>
+
+  <%= f.fields_for @page_module_image, :method => :post do |ff| -%>
+    <div class='field'>
+      <%= ff.label :photo -%>
+      <%= render '/refinery/admin/image_picker',
+                 :f => ff,
+                 :field => :photo_id,
+                 :image => @page_module_image.photo_id,
+                 :toggle_image_display => false -%>
+    </div>
+
+    <%= ff.fields_for @page_module_image, :method => :post do |fff| -%>
+      <div class='field'>
+        <%= fff.label :photo -%>
+        <%= render '/refinery/admin/image_picker',
+                   :f => fff,
+                   :field => :photo_id,
+                   :image => @page_module_image.photo_id,
+                   :toggle_image_display => false -%>
+      </div>
+    <% end %>
+
+  <% end %>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.page_modules.admin.page_modules.page_module'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @page_module.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

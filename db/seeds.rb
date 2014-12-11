@@ -3,17 +3,17 @@ Refinery::I18n.frontend_locales.each do |lang|
 
   if defined?(Refinery::User)
     Refinery::User.all.each do |user|
-      if user.plugins.where(:name => 'refinerycms-landing_pages').blank?
-        user.plugins.create(:name => 'refinerycms-landing_pages',
+      if user.plugins.where(:name => 'refinerycms-page_modules').blank?
+        user.plugins.create(:name => 'refinerycms-page_modules',
                             :position => (user.plugins.maximum(:position) || -1) +1)
       end
     end
   end
 
-  url = "/landing_pages"
+  url = "/page_modules"
   if defined?(Refinery::Page) && Refinery::Page.where(:link_url => url).empty?
     page = Refinery::Page.create(
-      :title => 'Landing Pages',
+      :title => 'Page Modules',
       :link_url => url,
       :deletable => false,
       :menu_match => "^#{url}(\/|\/.+?|)$"
