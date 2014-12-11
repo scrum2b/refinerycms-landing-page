@@ -1,29 +1,29 @@
 nb:
   refinery:
     plugins:
-      homes:
-        title: Homes
-    homes:
+      landing_pages:
+        title: Landing Pages
+    landing_pages:
       admin:
-        homes:
+        landing_pages:
           actions:
-            create_new: Lag en ny Home
-            reorder: Endre rekkefølgen på Homes
-            reorder_done: Ferdig å endre rekkefølgen Homes
+            create_new: Lag en ny Landing Page
+            reorder: Endre rekkefølgen på Landing Pages
+            reorder_done: Ferdig å endre rekkefølgen Landing Pages
           records:
-            title: Homes
+            title: Landing Pages
             sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Homes enda. Klikk på "Lag en ny Home" for å legge til din første home.
-          home:
-            view_live_html: Vis hvordan denne home ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
-            edit: Rediger denne home
-            delete: Fjern denne home permanent
-      homes:
+            no_items_yet: Det er ingen Landing Pages enda. Klikk på "Lag en ny Landing Page" for å legge til din første landing page.
+          landing_page:
+            view_live_html: Vis hvordan denne landing page ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne landing page
+            delete: Fjern denne landing page permanent
+      landing_pages:
         show:
-          other: Andre Homes
+          other: Andre Landing Pages
   activerecord:
     attributes:
-      'refinery/homes/home':
+      'refinery/landing_pages/landing_page':
         title: Title
         type_module: Type Module
-        content: Content
+        body: Body

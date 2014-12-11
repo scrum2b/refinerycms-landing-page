@@ -1,30 +1,30 @@
 es:
   refinery:
     plugins:
-      homes:
-        title: Homes
+      landing_pages:
+        title: Landing Pages
 #        article: masculino/femenino
-    homes:
+    landing_pages:
       admin:
-        homes:
+        landing_pages:
           actions:
-            create_new: Crear nuevo home
-            reorder: Reordenar homes
-            reorder_done: Reordenación de homes completada
+            create_new: Crear nuevo landing page
+            reorder: Reordenar landing pages
+            reorder_done: Reordenación de landing pages completada
           records:
-            title: Homes
+            title: Landing Pages
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay homes todavía. Pulsa en "Crear nuevo Home" para crear tu primer home.
-          home:
-            view_live_html: Ver este home como abierto al público <br/><em>(abre en ventana nueva)</em>
-            edit: Editar este home
-            delete: Borrar este home para siempre
-      homes:
+            no_items_yet: No hay landing pages todavía. Pulsa en "Crear nuevo Landing Page" para crear tu primer landing page.
+          landing_page:
+            view_live_html: Ver este landing page como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este landing page
+            delete: Borrar este landing page para siempre
+      landing_pages:
         show:
-          other: Otros homes
+          other: Otros landing pages
   activerecord:
     attributes:
-      'refinery/homes/home':
+      'refinery/landing_pages/landing_page':
         title: Title
         type_module: Type Module
-        content: Content
+        body: Body

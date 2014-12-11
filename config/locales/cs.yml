@@ -1,29 +1,29 @@
 cs:
   refinery:
     plugins:
-      homes:
-        title: Homes
-    homes:
+      landing_pages:
+        title: Landing Pages
+    landing_pages:
       admin:
-        homes:
+        landing_pages:
           actions:
-            create_new: Přidat Home
-            reorder: Řadit Homes
-            reorder_done: Konec řazení Homes
+            create_new: Přidat Landing Page
+            reorder: Řadit Landing Pages
+            reorder_done: Konec řazení Landing Pages
           records:
-            title: Homes
+            title: Landing Pages
             sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
-            no_items_yet: Zatím nebyly vytvořeny žádné Homes. Zvolte "Přidat Home" pro přidání prvního home.
-          home:
-            view_live_html: Zobrazit náhled home<br/><em>(otevře se v novém okně)</em>
-            edit: Upravit home
-            delete: Smazat home
-      homes:
+            no_items_yet: Zatím nebyly vytvořeny žádné Landing Pages. Zvolte "Přidat Landing Page" pro přidání prvního landing page.
+          landing_page:
+            view_live_html: Zobrazit náhled landing page<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit landing page
+            delete: Smazat landing page
+      landing_pages:
         show:
-          other: Další Homes
+          other: Další Landing Pages
   activerecord:
     attributes:
-      'refinery/homes/home':
+      'refinery/landing_pages/landing_page':
         title: Title
         type_module: Type Module
-        content: Content
+        body: Body

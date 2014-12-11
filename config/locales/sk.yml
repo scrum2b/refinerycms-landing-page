@@ -1,29 +1,29 @@
 sk:
   refinery:
     plugins:
-      homes:
-        title: Homes
-    homes:
+      landing_pages:
+        title: Landing Pages
+    landing_pages:
       admin:
-        homes:
+        landing_pages:
           actions:
-            create_new: Pridať Home
-            reorder: Preusporiadať Homes
-            reorder_done: Koniec radenia Homes
+            create_new: Pridať Landing Page
+            reorder: Preusporiadať Landing Pages
+            reorder_done: Koniec radenia Landing Pages
           records:
-            title: Homes
+            title: Landing Pages
             sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
-            no_items_yet: Nie sú vytvorené žiadne Homes. Kliknite na "Pridať Home" pre pridanie prvého home.
-          home:
-            view_live_html: Zobraziť náhľad home<br/><em>(otvorí sa v novom okne)</em>
-            edit: Upraviť home
-            delete: Zmazať home
-      homes:
+            no_items_yet: Nie sú vytvorené žiadne Landing Pages. Kliknite na "Pridať Landing Page" pre pridanie prvého landing page.
+          landing_page:
+            view_live_html: Zobraziť náhľad landing page<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť landing page
+            delete: Zmazať landing page
+      landing_pages:
         show:
-          other: Daľšie Homes
+          other: Daľšie Landing Pages
   activerecord:
     attributes:
-      'refinery/homes/home':
+      'refinery/landing_pages/landing_page':
         title: Title
         type_module: Type Module
-        content: Content
+        body: Body

@@ -1,29 +1,29 @@
 tr:
   refinery:
     plugins:
-      homes:
-        title: Homes
-    homes:
+      landing_pages:
+        title: Landing Pages
+    landing_pages:
       admin:
-        homes:
+        landing_pages:
           actions:
-            create_new: Yeni Ekle Home
-            reorder: Tekrar sirala Homes
-            reorder_done: Tekrar siralama tamamlandiHomes
+            create_new: Yeni Ekle Landing Page
+            reorder: Tekrar sirala Landing Pages
+            reorder_done: Tekrar siralama tamamlandiLanding Pages
           records:
-            title: Homes
+            title: Landing Pages
             sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
-            no_items_yet: Herhangi bir Homes yok henuz.  Tikla "Yeni Ekle Home" eklemek senin ilk home.
-          home:
-            view_live_html: Bunu canlu home goruntule <br/><em>(yeni bir pencerede acar)</em>
-            edit: Bunu Duzenle home
-            delete: Bunu Sil home sonsuza dek
-      homes:
+            no_items_yet: Herhangi bir Landing Pages yok henuz.  Tikla "Yeni Ekle Landing Page" eklemek senin ilk landing page.
+          landing_page:
+            view_live_html: Bunu canlu landing page goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle landing page
+            delete: Bunu Sil landing page sonsuza dek
+      landing_pages:
         show:
-          other: Diger Homes
+          other: Diger Landing Pages
   activerecord:
     attributes:
-      'refinery/homes/home':
+      'refinery/landing_pages/landing_page':
         title: Title
         type_module: Type Module
-        content: Content
+        body: Body

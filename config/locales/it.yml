@@ -1,29 +1,29 @@
 it:
   refinery:
     plugins:
-      homes:
-        title: Homes
-    homes:
+      landing_pages:
+        title: Landing Pages
+    landing_pages:
       admin:
-        homes:
+        landing_pages:
           actions:
-            create_new: Aggiungi Nuovo Home
-            reorder: Riordina Homes
-            reorder_done: Termina il Riordino di Homes
+            create_new: Aggiungi Nuovo Landing Page
+            reorder: Riordina Landing Pages
+            reorder_done: Termina il Riordino di Landing Pages
           records:
-            title: Homes
+            title: Landing Pages
             sorry_no_results: "Spiacenti! Nessun risultato trovato"
-            no_items_yet: Non ci sono ancora Homes. Clicca "Aggiungi Nuovo Home" per aggiungere il tuo primo home.
-          home:
-            view_live_html: Guarda live questo home <br/><em>(apre una nuova finestra)</em>
-            edit: Modifica questo home
-            delete: Rimuovi per sempre questo home
-      homes:
+            no_items_yet: Non ci sono ancora Landing Pages. Clicca "Aggiungi Nuovo Landing Page" per aggiungere il tuo primo landing page.
+          landing_page:
+            view_live_html: Guarda live questo landing page <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo landing page
+            delete: Rimuovi per sempre questo landing page
+      landing_pages:
         show:
-          other: Altri Homes
+          other: Altri Landing Pages
   activerecord:
     attributes:
-      'refinery/homes/home':
+      'refinery/landing_pages/landing_page':
         title: Title
         type_module: Type Module
-        content: Content
+        body: Body
