@@ -1,39 +1,37 @@
 <% content_for :body_content_title do %>
-  <%= @page_module.title %>
+  
 <% end %>
 
-<% content_for :body do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @page_module.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Type Module</h1>
-    <p>
-      <%=raw @page_module.type_module %>
-    </p>
-  </section>
-  <section>
-    <h1>Body</h1>
-    <p>
-      <%=raw @page_module.body %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="page_modules">
-      <% @page_modules.each do |page_module| %>
-        <li>
-          <%= link_to page_module.title, refinery.page_modules_page_module_path(page_module) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
+<% content_for :body do %>  
+  
+  <% if @page_module.type_module == "big slider" %>
+    <div class="slider">
+      <h1><%= @page_module.title %></h1>
+      <ul class="big_slider"> 
+        <% @page_module.page_module_images.each do |page_module_image| %>
+          <li class="ui-tabs-panel">
+            <%= image_fu(page_module_image.photo, "900x300")%>
+          </li> 
+        <% end %>
+      </ul>
+    </div> 
+  <% elsif @page_module.type_module == "small slider" %>
+    <div class="slider">
+      <div class="slider1">
+        <h1><%= @page_module.title %></h1>
+        <ul class="small_slider"> 
+          <% @page_module.page_module_images.each do |page_module_image| %>
+            <li class="ui-tabs-panel">
+              <%= image_fu(page_module_image.photo, "900x300")%>
+            </li> 
+          <% end %>
+        </ul>
+      </div>
+    </div> 
+  <% else %>
+    <h1><%= @page_module.title %></h1>
+    <%= raw @page_module.body %>
+  <% end %>
 <% end %>
 
 <%= render '/refinery/content_page' %>

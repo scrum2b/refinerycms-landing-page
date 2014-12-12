@@ -1,8 +1,8 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(page_module) -%>">
   <span class='title'>
     <%= page_module.title %>
-
-  </span>
+    (<%= page_module.type_module %>)
+  </span> 
   <span class='actions'>
     
     <%= link_to refinery_icon_tag("application_go.png"), refinery.page_modules_page_module_path(page_module),

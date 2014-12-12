@@ -12,7 +12,7 @@
 
   <div class='field' style="display: none" >
     <%= f.label :type_module -%>
-    <%= f.text_field :type_module, :value => 'big slider' -%>
+    <%= f.text_field :type_module, :value => 'small slider' -%>
   </div>
 
   <div class='field' style="display: none" >
@@ -22,34 +22,56 @@
                 :object => "page_modules/page_module" -%>
   </div>
 
-  <%= f.fields_for @page_module_image, :method => :post do |ff| -%>
-    <div class='field'>
-      <%= ff.label :photo -%>
-      <%= render '/refinery/admin/image_picker',
-                 :f => ff,
-                 :field => :photo_id,
-                 :image => @page_module_image.photo_id,
-                 :toggle_image_display => false -%>
+  <div class="module_photo">
+    <div id="image_picker_container_1">
+      <h3>Photo 1</h3>
+      <input class="current_image_id" name="page_module[page_module_image][1][photo_id]" type="hidden">
+      <div class="current_image_container" style="margin-top: 10px">
+        <a class="open_popup_select_image current_image_link dialog">
+            <img class="current_picked_image" src="" alt="" style="display: none">
+          <span class="no_picked_image_selected nothing_selected">
+            There is currently no image selected, please click here to add one.
+          </span>
+        </a>
+        <br>
+        <a href="#" class="remove_picked_image" style="display:none;">Remove current image</a>
+      </div>
     </div>
 
-    <%= ff.fields_for @page_module_image, :method => :post do |fff| -%>
-      <div class='field'>
-        <%= fff.label :photo -%>
-        <%= render '/refinery/admin/image_picker',
-                   :f => fff,
-                   :field => :photo_id,
-                   :image => @page_module_image.photo_id,
-                   :toggle_image_display => false -%>
+    <div id="image_picker_container_2">
+    <h3>Photo 2</h3>
+      <input class="current_image_id" name="page_module[page_module_image][2][photo_id]" type="hidden">
+      <div class="current_image_container" style="margin-top: 10px">
+        <a class="open_popup_select_image current_image_link dialog">
+            <img class="current_picked_image" src="" alt="" style="display: none">
+          <span class="no_picked_image_selected nothing_selected">
+            There is currently no image selected, please click here to add one.
+          </span>
+        </a>
+        <br>
+        <a href="#" class="remove_picked_image" style="display:none;">Remove current image</a>
       </div>
-    <% end %>
+    </div>
+  </div>
 
-  <% end %>
+  <a class="add_photo">Add Photo</a>
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.page_modules.admin.page_modules.page_module'),
              :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @page_module.title) -%>
 <% end -%>
+
+<div class="popup_select_image ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable" tabindex="-1" role="dialog" aria-describedby="dialog_iframe" aria-labelledby="ui-id-2" style="height: auto; width: 866px; top: 81.5px; left: 238.5px; display: none; z-index: 9999">
+  <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+    <span id="ui-id-2" class="ui-dialog-title">Click here to pick an image</span>
+    <button class="close_popup ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close">
+      <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+      <span class="ui-button-text">close</span>
+    </button>
+  </div>
+  <iframe id="dialog_iframe" frameborder="0" marginheight="0" marginwidth="0" border="0" class="ui-dialog-content ui-widget-content" style="display: inline; width: auto; min-height: 0px; max-height: none; height: 450px;" src="/refinery/images/insert?callback=image_picker_1_changed&amp;app_dialog=true&amp;dialog=true"></iframe>
+</div>
 
 <% content_for :javascripts do -%>
   <script>
@@ -58,3 +80,25 @@
     });
   </script>
 <% end -%>
+
+<script type="text/javascript">
+  var stt_image = 2;
+  $(".add_photo").click(function() {
+    
+    stt_image = stt_image + 1;
+    var html_new_image = "<div id=\"image_picker_container_" + stt_image + "\"> <h3>Photo " + stt_image + "</h3><input class=\"current_image_id\" name=\"page_module[page_module_image][" + stt_image + "][photo_id]\" type=\"hidden\" ><div class=\"current_image_container\" style=\"margin-top: 10px\"><a class=\"open_popup_select_image current_image_link dialog\"><img class=\"current_picked_image\"  style=\"display: none\"><span class=\"no_picked_image_selected nothing_selected\">There is currently no image selected, please click here to add one.</span></a><br><a href=\"#\" class=\"remove_picked_image\" style=\"display:none;\">Remove current image</a></div></div>";
+
+    $('.module_photo').append(html_new_image);
+    $('.open_popup_select_image').click(function() {
+      $('.popup_select_image').show();
+    });
+  });
+
+  $('.open_popup_select_image').click(function() {
+    $('.popup_select_image').show();
+  });
+
+  $('.close_popup').click(function() {
+    $('.popup_select_image').hide();
+  });
+</script>
