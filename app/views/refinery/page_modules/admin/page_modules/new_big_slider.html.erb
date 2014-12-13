@@ -42,12 +42,20 @@
                      :image => @page_module_image.photo_id,
                      :toggle_image_display => false -%>
         </div>
+        <%= fff.fields_for @page_module_image, :method => :post do |ffff| -%>
+          <div class='field'>
+            <%= ffff.label :photo -%>
+            <%= render '/refinery/admin/image_picker',
+                       :f => ffff,
+                       :field => :photo_id,
+                       :image => @page_module_image.photo_id,
+                       :toggle_image_display => false -%>
+          </div>
+        <% end %>
       <% end %>
 
     </div>
     <% end %>
-
-  <p class="add_photo" style="display: ">Add photo</p>
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,

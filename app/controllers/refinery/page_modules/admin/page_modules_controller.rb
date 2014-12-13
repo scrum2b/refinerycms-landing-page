@@ -21,12 +21,18 @@ module Refinery
         	@page_module = PageModule.new( :title => params[:page_module][:title], :type_module => params[:page_module][:type_module] )
 					if @page_module.valid? && @page_module.save
 						@page_module_image = PageModuleImage.new( :page_module_id => @page_module.id, :photo_id => params[:page_module][:page_module_image][:photo_id] )
-						@page_module_image.save if @page_module_image.valid?
+						@page_module_image.save if @page_module_image.valid? && params[:page_module][:page_module_image][:photo_id] != ""
 						@page_module_image = PageModuleImage.new( :page_module_id => @page_module.id, :photo_id => params[:page_module][:page_module_image][:page_module_image][:photo_id] )
-						@page_module_image.save if @page_module_image.valid?
+						@page_module_image.save if @page_module_image.valid? && params[:page_module][:page_module_image][:page_module_image][:photo_id] != ""
+            @page_module_image = PageModuleImage.new( :page_module_id => @page_module.id, :photo_id => params[:page_module][:page_module_image][:page_module_image][:page_module_image][:photo_id] )
+            @page_module_image.save if @page_module_image.valid? && params[:page_module][:page_module_image][:page_module_image][:page_module_image][:photo_id] != ""
 						redirect_to "/refinery/page_modules"
 					else
-						redirect_to "/refinery/page_modules/new_small_slider"
+            if params[:page_module][:type_module] == "big slider"
+              redirect_to "/refinery/page_modules/new_big_slider"
+            else
+              redirect_to "/refinery/page_modules/new_small_slider"
+            end
 					end
 
         end
